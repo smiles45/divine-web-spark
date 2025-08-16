@@ -80,18 +80,20 @@ const Gallery = () => {
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-lg shadow-blessed hover:shadow-divine transition-all duration-300 cursor-pointer"
+              className="group relative overflow-hidden rounded-lg shadow-blessed hover:shadow-divine transition-all duration-500 cursor-pointer animate-fade-in hover-scale"
+              style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => openModal(index)}
             >
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-80 object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-75"
               />
-              <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <h3 className="font-serif font-bold text-xl mb-2">{image.title}</h3>
-                  <p className="text-sm">Click to view</p>
+              <div className="absolute inset-0 bg-gradient-divine opacity-0 group-hover:opacity-90 transition-all duration-500 flex items-center justify-center">
+                <div className="text-center text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="font-serif font-bold text-xl mb-2 animate-scale-in">{image.title}</h3>
+                  <p className="text-sm opacity-80">Click to view gallery</p>
+                  <div className="mt-3 w-12 h-0.5 bg-gold mx-auto animate-fade-in"></div>
                 </div>
               </div>
             </div>
@@ -100,12 +102,12 @@ const Gallery = () => {
 
         {/* Modal */}
         {selectedImage !== null && (
-          <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
-            <div className="relative max-w-5xl max-h-full">
+          <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 animate-fade-in">
+            <div className="relative max-w-5xl max-h-full animate-scale-in">
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute top-4 right-4 text-white hover:bg-white/20 z-10"
+                className="absolute top-4 right-4 text-white hover:bg-white/20 z-10 transition-all duration-200 hover:scale-110"
                 onClick={closeModal}
               >
                 <X className="h-6 w-6" />
@@ -115,7 +117,7 @@ const Gallery = () => {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20 z-10"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20 z-10 transition-all duration-200 hover:scale-110 animate-slide-in-right"
                   onClick={prevImage}
                 >
                   <ChevronLeft className="h-8 w-8" />
@@ -126,7 +128,7 @@ const Gallery = () => {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20 z-10"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20 z-10 transition-all duration-200 hover:scale-110 animate-slide-in-right"
                   onClick={nextImage}
                 >
                   <ChevronRight className="h-8 w-8" />
@@ -136,16 +138,17 @@ const Gallery = () => {
               <img
                 src={galleryImages[selectedImage].src}
                 alt={galleryImages[selectedImage].alt}
-                className="max-w-full max-h-full object-contain rounded-lg"
+                className="max-w-full max-h-full object-contain rounded-lg shadow-divine animate-scale-in"
               />
               
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-center text-white bg-black/50 px-4 py-2 rounded-lg">
-                <h3 className="font-serif font-bold text-lg">
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-center text-white bg-gradient-to-t from-black/80 to-transparent px-6 py-4 rounded-xl backdrop-blur-sm animate-fade-in">
+                <h3 className="font-serif font-bold text-lg text-gold mb-1">
                   {galleryImages[selectedImage].title}
                 </h3>
-                <p className="text-sm opacity-80">
+                <p className="text-sm opacity-90">
                   {selectedImage + 1} of {galleryImages.length}
                 </p>
+                <div className="w-8 h-0.5 bg-gold mx-auto mt-2"></div>
               </div>
             </div>
           </div>
