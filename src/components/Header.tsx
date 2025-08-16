@@ -45,6 +45,7 @@ const Header = () => {
             <a href="#home" className="hover:text-gold transition-colors">Home</a>
             <a href="#about" className="hover:text-gold transition-colors">About</a>
             <a href="#services" className="hover:text-gold transition-colors">Services</a>
+            <a href="#gallery" className="hover:text-gold transition-colors">Gallery</a>
             <a href="#contact" className="hover:text-gold transition-colors">Contact</a>
           </nav>
 
@@ -66,6 +67,7 @@ const Header = () => {
               <a href="#home" className="hover:text-gold transition-colors py-2">Home</a>
               <a href="#about" className="hover:text-gold transition-colors py-2">About</a>
               <a href="#services" className="hover:text-gold transition-colors py-2">Services</a>
+              <a href="#gallery" className="hover:text-gold transition-colors py-2">Gallery</a>
               <a href="#contact" className="hover:text-gold transition-colors py-2">Contact</a>
               <div className="pt-4 space-y-2 text-sm border-t border-primary-light/20">
                 <div className="flex items-center space-x-2">
