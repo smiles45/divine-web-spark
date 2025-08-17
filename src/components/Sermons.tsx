@@ -11,7 +11,8 @@ import {
   Quote, 
   ArrowRight,
   Download,
-  Share2
+  Share2,
+  Home
 } from "lucide-react";
 
 const Sermons = () => {
@@ -120,8 +121,20 @@ const Sermons = () => {
   const categories = ["All", "Prayer", "Faith", "Evangelism", "Community", "Growth", "Grace"];
 
   return (
-    <section id="sermons" className="py-20 bg-gradient-peace">
+    <section className="py-20 bg-gradient-peace">
       <div className="container mx-auto px-4">
+        {/* Back to Home Button */}
+        <div className="mb-8">
+          <Button 
+            variant="outline" 
+            className="border-gold text-gold hover:bg-gold hover:text-primary transition-all duration-300"
+            onClick={() => window.location.href = '/'}
+          >
+            <Home className="mr-2 h-4 w-4" />
+            Back to Home
+          </Button>
+        </div>
+
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-serif font-bold text-4xl md:text-5xl text-scripture-dark mb-6">
