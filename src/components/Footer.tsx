@@ -1,4 +1,4 @@
-import { Facebook, Phone, MapPin, Heart } from "lucide-react";
+import { Facebook, Phone, MapPin, Heart, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -59,11 +59,38 @@ const Footer = () => {
             </h4>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
+                <Mail className="h-5 w-5 text-gold" />
+                <div>
+                  <p className="text-sm text-primary-foreground/70">Email Us</p>
+                  <a href="mailto:Apostlemwanikijames@gmail.com" className="hover:text-gold transition-colors">
+                    Apostlemwanikijames@gmail.com
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-gold" />
                 <div>
                   <p className="text-sm text-primary-foreground/70">Call Us</p>
                   <a href="tel:0725586742" className="hover:text-gold transition-colors">
                     0725 586742
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="h-5 w-5 text-gold" />
+                <div>
+                  <p className="text-sm text-primary-foreground/70">Call Us</p>
+                  <a href="tel:+254704307311" className="hover:text-gold transition-colors">
+                    +254 704 307 311
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="h-5 w-5 text-gold" />
+                <div>
+                  <p className="text-sm text-primary-foreground/70">Call Us</p>
+                  <a href="tel:+254724838657" className="hover:text-gold transition-colors">
+                    +254 724 838 657
                   </a>
                 </div>
               </div>

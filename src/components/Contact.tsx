@@ -2,15 +2,33 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Phone, MapPin, Clock, Facebook, Send } from "lucide-react";
+import { Phone, MapPin, Clock, Facebook, Send, Mail } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
+    {
+      icon: <Mail className="h-6 w-6 text-gold" />,
+      title: "Email",
+      info: "Apostlemwanikijames@gmail.com",
+      action: "mailto:Apostlemwanikijames@gmail.com"
+    },
     {
       icon: <Phone className="h-6 w-6 text-gold" />,
       title: "Phone",
       info: "0725 586742",
       action: "tel:0725586742"
+    },
+    {
+      icon: <Phone className="h-6 w-6 text-gold" />,
+      title: "Phone",
+      info: "+254 704 307 311",
+      action: "tel:+254704307311"
+    },
+    {
+      icon: <Phone className="h-6 w-6 text-gold" />,
+      title: "Phone",
+      info: "+254 724 838 657",
+      action: "tel:+254724838657"
     },
     {
       icon: <MapPin className="h-6 w-6 text-gold" />,

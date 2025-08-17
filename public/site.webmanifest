@@ -1,0 +1,23 @@
+{
+  "name": "Gospel Impact Church",
+  "short_name": "GIC Nakuru",
+  "description": "Gospel Impact Church - Whitehouse Nakuru. We believe in Jesus Christ and rule through prayers! Join us for worship, prayer, and Christian fellowship.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e3a8a",
+  "theme_color": "#1e3a8a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["religion", "community", "lifestyle"],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}
+
